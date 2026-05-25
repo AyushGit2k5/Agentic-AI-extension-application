@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "AI Web Agent",
+  "version": "1.0",
+  "description": "Agentic AI Web Research Assistant",
+
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "<all_urls>",
+    "http://localhost:5000/*",
+    "http://127.0.0.1:5000/*"
+  ],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
